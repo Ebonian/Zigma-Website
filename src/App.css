@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow: overlay;
+  overflow-x: hidden;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* background: #010606; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c2d32;
+  border-radius: 0px;
+  transition: all 1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(0deg, #00a195, #2cd483);
+
+  -webkit-animation: scrollanim 2s ease infinite;
+  -moz-animation: scrollanim 2s ease infinite;
+  animation: scrollanim 2s ease infinite;
+}
+
+@-webkit-keyframes scrollanim {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@-moz-keyframes scrollanim {
+  0% {
+    background-position: 50% 0%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes scrollanim {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
   }
 }
